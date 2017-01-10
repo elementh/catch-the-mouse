@@ -1,193 +1,155 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    text-align: center;
-}
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  text-align: center; }
 
 .container {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-}
+  text-align: center;
+  display: flex;
+  flex-direction: row; }
 
 .game-container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 2;
-    border-radius: 10px 10px 10px 10px;
-    border: 22px double #4CAF50;
-    margin-left: 2vw;
-}
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  border-radius: 10px 10px 10px 10px;
+  border: 22px double #4CAF50;
+  margin-left: 2vw; }
 
 .menu-container {
-    display: flex;
-    flex-direction: column;
-}
+  display: flex;
+  flex-direction: column; }
 
 .stats-container {
-    display: flex;
-    flex-direction: column;
-}
+  display: flex;
+  flex-direction: column; }
 
 header p {
-    font-size: 200%;
-    margin: 1vw;
-    background: #4CAF50;
-    color: white;
-    padding: 0.5vw;
-    border-radius: 1vw;
-}
+  font-size: 200%;
+  margin: 1vw;
+  background: #4CAF50;
+  color: white;
+  padding: 0.5vw;
+  border-radius: 1vw; }
 
 nav {
-    order: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 nav h3 {
-    margin: 1vw;
-    background: #4CAF50;
-    color: white;
-    padding: 0.5vw;
-    width: 15vw;
-    border-radius: 1vw;
-}
+  margin: 1vw;
+  background: #4CAF50;
+  color: white;
+  padding: 0.5vw;
+  width: 15vw;
+  border-radius: 1vw; }
 
 nav p {
-    font-size: 200%;
-    margin: 0;
-}
+  font-size: 200%;
+  margin: 0; }
 
 .game {
-    order: 3;
-    display: flex;
-    flex-direction: column;
-}
+  order: 3;
+  display: flex;
+  flex-direction: column; }
 
 .game button {
-    margin: auto;
-    margin-top: 3vw;
-    margin-bottom: 3vw;
-    background-color: #4CAF50;
-    border: 1px solid #44c767;
-    border-radius: 1vw;
-    color: white;
-    font-weight: bold;
-    padding: 0.5vw;
-    width: 9vw;
-}
+  margin: auto;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  background-color: #4CAF50;
+  border: 1px solid #44c767;
+  border-radius: 1vw;
+  color: white;
+  font-weight: bold;
+  padding: 0.5vw;
+  width: 9vw; }
 
 .game button:hover {
-    background-color: #5cbf2a;
-}
+  background-color: #5cbf2a; }
 
 .game button:active {
-    position: relative;
-    top: 1px;
-}
+  position: relative;
+  top: 1px; }
 
 table {
-    width: 100%;
-    height: 20vw;
-}
+  width: 100%;
+  height: 20vw; }
 
 footer {
-    order: 4;
-    text-align: left;
-}
+  order: 4;
+  text-align: left; }
 
 footer p {
-    text-align: center;
-    margin: 1vw;
-    background: #4CAF50;
-    color: white;
-    padding: 0.1vw;
-    border-radius: 1vw;
-}
+  text-align: center;
+  margin: 1vw;
+  background: #4CAF50;
+  color: white;
+  padding: 0.1vw;
+  border-radius: 1vw; }
 
 .icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0;
-    padding: 0;
-}
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0;
+  padding: 0; }
 
 #upgrades-container {
-    margin: 0 2rem 0;
-    font-size: 0.7rem;
-}
+  margin: 0 2rem 0;
+  font-size: 0.7rem; }
 
 #upgrades-container p {
-    border: 1px solid #44c767;
-    margin: 0.5rem;
-    padding: 0;
-    border-radius: 2vw;
-}
-
+  border: 1px solid #44c767;
+  margin: 0.5rem;
+  padding: 0;
+  border-radius: 2vw; }
 
 /*Since checkbox won't scale gracefully on firefox(it goes blurry) I used CSS custom styling in the checkbox to the max, hope you like it*/
-
-
 /* Base for label styling */
-
 [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-    position: absolute;
-    left: -9999px;
-}
+  position: absolute;
+  left: -9999px; }
 
-[type="checkbox"]:not(:checked)+label, [type="checkbox"]:checked+label {
-    position: relative;
-    padding-left: 25px;
-    cursor: pointer;
-}
-
+[type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer; }
 
 /* checkbox aspect */
-
-[type="checkbox"]:not(:checked)+label:before, [type="checkbox"]:checked+label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 2px;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #aaa;
-    background: #f8f8f8;
-    border-radius: 3px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .3)
-}
-
+[type="checkbox"]:not(:checked) + label:before, [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #aaa;
+  background: #f8f8f8;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); }
 
 /* checked mark aspect */
-
-[type="checkbox"]:not(:checked)+label:after, [type="checkbox"]:checked+label:after {
-    content: url(https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_512x512/1f401.png);
-    position: absolute;
-    top: -14rem;
-    left: -14rem;
-    font-size: 48px;
-    line-height: 0.8;
-    color: #4CAF50;
-    transition: all .2s;
-}
-
+[type="checkbox"]:not(:checked) + label:after, [type="checkbox"]:checked + label:after {
+  content: url(https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_512x512/1f401.png);
+  position: absolute;
+  top: -14rem;
+  left: -14rem;
+  font-size: 48px;
+  line-height: 0.8;
+  color: #4CAF50;
+  transition: all .2s; }
 
 /* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0); }
 
-[type="checkbox"]:not(:checked)+label:after {
-    opacity: 0;
-    transform: scale(0);
-}
-
-[type="checkbox"]:checked+label:after {
-    opacity: 1;
-    transform: scale(0.15);
-}
-
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(0.15); }
 
 /* accessibility */
-
-[type="checkbox"]:checked:focus+label:before, [type="checkbox"]:not(:checked):focus+label:before {
-    border: 1px dotted blue;
-}
+[type="checkbox"]:checked:focus + label:before, [type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted blue; }

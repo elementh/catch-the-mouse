@@ -1,0 +1,24 @@
+{
+  "name": "catch-the-mouse",
+  "private": true,
+  "version": "0.0.3",
+  "description": "Catch the mouse!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-css": "node-sass -w source/scss/ --output ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elementh/catch-the-mouse.git"
+  },
+  "author": "Lucas Maximiliano Marino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elementh/catch-the-mouse/issues"
+  },
+  "homepage": "https://github.com/elementh/catch-the-mouse#readme",
+  "devDependencies": {
+    "node-sass": "^4.2.0"
+  }
+}
