@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1">
+    <!-- ================== TITLE ================== -->
+    <title>Catch the Mouse</title>
+    <!-- ================== OTHER ================== -->
+    <meta name="description" content="Catch the Mouse, by Lucas Maximiliano Marino">
+    <!-- ================== STYLE ================== -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <header>
+      <p>Catch the Mouse</p>
+    </header>
+    <div class="container">
+      <div class="game-container">
+        <div class="game">
+          <table>
+            <tr>
+              <td>
+                <input type="checkbox" id="0" />
+                <label for="0"></label> </td>
+              <td>
+                <input type="checkbox" id="1" />
+                <label for="1"></label> </td>
+              <td>
+                <input type="checkbox" id="2" />
+                <label for="2"></label> </td>
+              <td>
+                <input type="checkbox" id="3" />
+                <label for="3"></label> </td>
+              <td>
+                <input type="checkbox" id="4">
+                <label for="4"></label> </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="5" />
+                <label for="5"></label> </td>
+              <td>
+                <input type="checkbox" id="6" />
+                <label for="6"></label> </td>
+              <td>
+                <input type="checkbox" id="7" />
+                <label for="7"></label> </td>
+              <td>
+                <input type="checkbox" id="8" />
+                <label for="8"></label> </td>
+              <td>
+                <input type="checkbox" id="9" />
+                <label for="9"></label> </td>
+            </tr>
+          </table>
+          <button type="button" name="button" id="start-button">START</button>
+        </div>
+
+      </div>
+      <div class="stats-container">
+        <nav>
+          <h3>
+                  <img class="icon" src="https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_128x128/23f3.png">
+                  TIME
+                  <img class="icon" src="https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_128x128/23f3.png">
+                </h3>
+          <p id="time"></p>
+          <h3>
+                  <img class="icon" src="https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_128x128/2b50.png">
+                  LEVEL
+                  <img class="icon" src="https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_128x128/2b50.png">
+                </h3>
+          <p id="level"></p>
+          <h3>
+                  <img class="icon" src="https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_128x128/1f42d.png">
+                   FREE
+                   <img class="icon" src="https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_128x128/1f42d.png">
+                 </h3>
+          <p id="alive"></p>
+          <h3>
+                  <img class="icon" src="https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_128x128/26d3.png">
+                  CATCHED
+                  <img class="icon" src="https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_128x128/26d3.png">
+                </h3>
+          <p id="kills"></p>
+
+        </nav>
+      </div>
+      <div class="menu-container">
+        <nav>
+          <h3>
+                  <img class="icon" src="https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_128x128/1f4b6.png">
+                  MONEY
+                  <img class="icon" src="https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_128x128/1f4b6.png">
+                </h3>
+          <p id="coins"></p>
+          <h3>
+                  <img class="icon" src="https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_128x128/2692.png">
+                  UPGRADES
+                  <img class="icon" src="https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_128x128/2692.png">
+                </h3>
+          <div id="upgrades-container">
+          </div>
+        </nav>
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+</html>
