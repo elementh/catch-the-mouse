@@ -1,0 +1,7 @@
+body {
+  @include column;
+  font-family: 'Creepster', cursive;
+  text-align : center;
+  color      : $green-primary;
+  background : $background;
+}
