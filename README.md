@@ -1,6 +1,6 @@
 # Catch the Mouse
 
-You can play [here][http://lucasmarino.me/catch-the-mouse/]
+You can play [here](http://lucasmarino.me/catch-the-mouse/).
 
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
