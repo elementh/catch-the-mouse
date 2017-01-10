@@ -3,10 +3,12 @@
   "private": true,
   "version": "0.0.3",
   "description": "Catch the mouse!",
-  "main": "index.js",
+  "main": "source/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-css": "node-sass -w source/scss/ --output ./"
+    "test": "standard",
+    "watch-css": "node-sass -w source/scss/ --output ./",
+    "watch-js": "watchify source/index.js -o bundle.js -v",
+    "watch": "npm run watch-js & npm run watch-css"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,15 @@
     "url": "https://github.com/elementh/catch-the-mouse/issues"
   },
   "homepage": "https://github.com/elementh/catch-the-mouse#readme",
+  "browser": {
+    "vue": "vue/dist/vue.common"
+  },
   "devDependencies": {
-    "node-sass": "^4.2.0"
+    "node-sass": "^4.2.0",
+    "standard": "^8.6.0",
+    "watchify": "^3.8.0"
+  },
+  "dependencies": {
+    "vue": "^2.1.8"
   }
 }
