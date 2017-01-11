@@ -1,0 +1,65 @@
+.container {
+  @include row;
+
+  .stats {
+    @include column;
+    flex-grow      : 0;
+    flex-wrap      : wrap;
+    justify-content: center;
+
+    div {
+      font-family: 'Creepster', cursive;
+      // border       : 1px solid #44c767;
+      margin     : 0.5rem;
+      padding    : 0.2rem 1rem;
+      // border-radius: 2vw;
+      p {
+        @include row;
+        font-size: 200%;
+        margin   : 0.2rem;
+        display  : inline;
+        clear    : none;
+
+        .icon {
+          transform: scale(0.1);
+          display  : inline;
+          clear    : none;
+        }
+      }
+
+      span {
+        font-size: 500%;
+      }
+    }
+  }
+
+  .game {
+    @include column;
+    flex-grow: 2;
+
+    #start-button {
+      font-family     : 'Creepster', cursive;
+      font-size       : 3rem;
+      margin          : 5rem auto;
+      background-color: $green-secondary;
+      border          : 0.1rem solid $green-secondary;
+      border-radius   : 1rem;
+      color           : $background;
+      width           : 20rem;
+      height          : 5rem;
+
+      &:hover {
+        background-color: $green-primary;
+      }
+
+      &:active {
+        box-shadow: inset 0 0.3rem 1rem rgba(0, 0, 0, .3);
+      }
+    }
+  }
+
+  .upgrades {
+    flex-grow: 1;
+    font-size: 200%;
+  }
+}

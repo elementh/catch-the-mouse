@@ -1,6 +1,19 @@
 header {
   h1 {
-    font-weight: bold;
-    font-size  : 4rem;
+    @include non-selectable;
+    font-weight            : bold;
+    font-size              : 600%;
+    margin                 : 1rem;
+    //Inner Shadow
+    background-color       : $green-secondary;
+    color                  : transparent;
+    text-shadow            : 0 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip   : text;
+    background-clip        : text;
+
+    a:hover .octicon {
+      fill: $green-primary;
+    }
   }
 }
