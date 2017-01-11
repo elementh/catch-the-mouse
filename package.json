@@ -1,7 +1,7 @@
 {
   "name": "catch-the-mouse",
   "private": true,
-  "version": "0.0.3",
+  "version": "2016.0.4",
   "description": "Catch the mouse!",
   "main": "source/index.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "watchify": "^3.8.0"
   },
   "dependencies": {
+    "sweetalert2": "^6.3.0",
     "vue": "^2.1.8"
   }
 }
