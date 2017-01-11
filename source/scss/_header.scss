@@ -11,9 +11,33 @@ header {
     -webkit-background-clip: text;
     -moz-background-clip   : text;
     background-clip        : text;
+  }
 
-    a:hover .octicon {
-      fill: $green-primary;
+  a:hover .octicon {
+    fill: $green-primary;
+  }
+
+  #player {
+    position     : absolute;
+    top          : 1rem;
+    left         : 1rem;
+    font-family  : 'Creepster', cursive;
+    border       : 0.1rem solid $green-secondary;
+    border-radius: 1rem;
+    color        : $green-primary;
+
+    h2 {
+      margin : 0;
+      padding: 0.5rem;
+    }
+
+    &:hover {
+      background-color: $green-primary;
+      color           : $background;
+    }
+
+    &:active {
+      box-shadow: inset 0 0.3rem 1rem rgba(0, 0, 0, .3);
     }
   }
 }

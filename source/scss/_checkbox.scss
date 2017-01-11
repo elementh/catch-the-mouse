@@ -35,9 +35,10 @@ table {
 [type="checkbox"]:checked+label:after,
 [type="checkbox"]:not(:checked)+label:after {
   content    : url("https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_512x512/1f401.png");
+  // content    : url("catch-the-mouse.github.io/assets/1f401.svg");
   position   : absolute;
-  top        : -14rem;
-  left       : -14rem;
+  top        : -13rem;
+  left       : -13rem;
   font-size  : 48px;
   line-height: 0.8;
   color      : $green-secondary;
@@ -51,7 +52,7 @@ table {
 
 [type="checkbox"]:checked+label:after {
   opacity  : 1;
-  transform: scale(0.15);
+  transform: scale(0.3);
 }
 /* accessibility */
 [type="checkbox"]:checked:focus+label:before,

@@ -14,16 +14,13 @@
       padding    : 0.2rem 1rem;
       // border-radius: 2vw;
       p {
-        @include row;
-        font-size: 200%;
+        font-size: 2rem;
         margin   : 0.2rem;
-        display  : inline;
-        clear    : none;
 
         .icon {
-          transform: scale(0.1);
-          display  : inline;
-          clear    : none;
+          width  : 2rem;
+          display: inline;
+          clear  : none;
         }
       }
 

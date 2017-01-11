@@ -16,14 +16,112 @@
   <body>
     <header>
       <a class="github-corner" href="https://github.com/elementh/elementh.github.io">
-          <svg class="octicon" width="80" height="80" viewbox="0 0 250 250">
+        <svg class="octicon" width="80" height="80" viewbox="0 0 250 250">
             <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
             <path class="octo-arm" d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px"></path>
-            <path class="octo-body" d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor"></path>
+            <path class="octo-body" d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2  ,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor"></path>
           </svg></a>
       <h1>Catch the Mouse</h1>
+      <div id="player">
+        <h2>Player: {{ player.name }}</h2>
+      </div>
     </header>
-    <script src="bundle.js"></script>
+    <div class="container">
+      <div class="stats" id="stats">
+        <div>
+          <p>
+            <img class="icon" src="assets/23f3.svg"> time <img class="icon" src="assets/23f3.svg">
+          </p>
+          <span>{{ time }}</span>
+        </div>
+        <div>
+          <p>
+            <img class="icon" src="assets/2b50.svg"> wave <img class="icon" src="assets/2b50.svg">
+          </p>
+          <span>{{ wave }}</span>
+        </div>
+        <div>
+          <p>
+            <img class="icon" src="assets/1f42d.svg"> free <img class="icon" src="assets/1f42d.svg">
+          </p>
+          <span>{{ free }}</span>
+        </div>
+        <div>
+          <p>
+            <img class="icon" src="assets/26d3.svg"> catched <img class="icon" src="assets/26d3.svg"> 
+          </p>
+          <span>{{ catched }}</span>
+        </div>
+      </div>
+      <div class="game">
+        <table>
+          <tr>
+            <td>
+              <input type="checkbox" id="0" />
+              <label for="0"></label> </td>
+            <td>
+              <input type="checkbox" id="1" />
+              <label for="1"></label> </td>
+            <td>
+              <input type="checkbox" id="2" />
+              <label for="2"></label> </td>
+            <td>
+              <input type="checkbox" id="3" />
+              <label for="3"></label> </td>
+            <td>
+              <input type="checkbox" id="4">
+              <label for="4"></label> </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input type="checkbox" id="5" />
+              <label for="5"></label> </td>
+            <td>
+              <input type="checkbox" id="6" />
+              <label for="6"></label> </td>
+            <td>
+              <input type="checkbox" id="7" />
+              <label for="7"></label> </td>
+            <td>
+              <input type="checkbox" id="8" />
+              <label for="8"></label> </td>
+            <td>
+              <input type="checkbox" id="9" />
+              <label for="9"></label> </td>
+          </tr>
+        </table>
+        <button type="button" name="button" id="start-button">START</button>
+      </div>
+      <div class="upgrades" id="upgrades">
+        <div>
+          <p>
+            <!-- <img class="icon" src="assets/26d3.svg">  -->
+            money 
+            <!-- <img class="icon" src="assets/26d3.svg">  -->
+          </p>
+          <span>{{ money }}</span>
+        </div>
+        <span>
+          <p>{{ upgrade[1] }}</p>
+        </span>
+        <span>
+          <p>{{ upgrade[2] }}</p>
+        </span>
+        <span>
+          <p>{{ upgrade[3] }}</p>
+        </span>
+        <span>
+          <p>{{ upgrade[4] }}</p>
+        </span>
+      </div>
+
+    </div>
+
+      <footer>
+      </footer>
+      <!-- ================= SCRIPT ================== -->
+      <script src="bundle.js"></script>
   </body>
 
 </html>
