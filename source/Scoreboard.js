@@ -18,6 +18,12 @@ class Scoreboard {
       ever: 0
     }
     this._traps = {
+      multiplier: 1,
+      session: 0,
+      ever: 0
+    }
+    this._clocks = {
+      multiplier: 1,
       session: 0,
       ever: 0
     }
@@ -58,6 +64,41 @@ class Scoreboard {
   }
   set traps (value) {
     this._traps = value
+  }
+  get clocks () {
+    return this._clocks
+  }
+  set clocks (value) {
+    this._clocks = value
+  }
+  // prestige level
+  addPrestigeLevel (value) {
+    this.prestigeLevel += value
+  }
+  // wave
+  addWave (value) {
+    this.wave.session += value
+    this.wave.ever += value
+  }
+  // coins
+  addCoins (value) {
+    this.coins.session += value
+    this.coins.ever += value
+  }
+  // catched
+  addCatched (value) {
+    this.catched.session += value
+    this.catched.ever += value
+  }
+  // trap
+  addTrap (value) {
+    this.traps.session += value
+    this.traps.ever += value
+  }
+  // clocks
+  addClock (value) {
+    this.clocks.session += value
+    this.clocks.ever += value
   }
 
 }

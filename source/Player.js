@@ -8,8 +8,6 @@ class Player extends Scoreboard {
     super()
     this._name = ''
     this._coinsPerCatch = 1
-    this._traps = 0
-    this._extraTime = 0
   }
   // get & set
   get name () {
@@ -24,18 +22,6 @@ class Player extends Scoreboard {
   set coinsPerCatch (value) {
     this._coinsPerCatch = value
   }
-  get traps () {
-    return this._traps
-  }
-  set traps (value) {
-    this._traps = value
-  }
-  get extraTime () {
-    return this._extraTime
-  }
-  set extraTime (value) {
-    this._extraTime = value
-  }
   // name
   newName (value) {
     if (typeof value === 'string' && value.length <= 20) {
@@ -44,6 +30,10 @@ class Player extends Scoreboard {
     } else {
       return false
     }
+  }
+  // coins
+  addCoins () {
+    super.addCoins(this.coinsPerCatch)
   }
 
 }
