@@ -1,6 +1,7 @@
 'use strict'
 // requires
 const Player = require('./Player').Player
+const Generator = require('./Generator').Generator
 
 // Game
 class Game extends Player {
@@ -11,6 +12,9 @@ class Game extends Player {
     this._timeout = null
     this._checkbox = {}
     this._startButton = document.getElementById('start-button')
+    // REFACTOR THIS LATER
+    this._generator = new Generator()
+    this._upgrades = []
   }
   // get & set
   get time () {
@@ -177,6 +181,44 @@ class Game extends Player {
     this.startButtonDisable()
     // TODO: look for a better way
   }
+
+  /* TODO: REFACTOR UPGRADES */
+  get upgrades () {
+    return this._upgrades
+  }
+  set upgrades (value) {
+    return this._upgrades = value
+  }
+  get generator () {
+    return this._generator
+  }
+  set generator (value) {
+    return this._generator = value
+  }
+  // upgrades
+  fillUpgrades () {
+    while (this.upgrades.length < 4) {
+      this.upgrades.push(this.generator.create())
+    }
+  }
+  buyupgrade (num) {
+    if (this.upgrades[num].kind === 'time') {
+      this.others.extratime += 2
+      this.time = 15 - this.level + this.others.extratime
+      this.coins -= this.upgrades[num].price
+      this.upgrades.splice(num, 1, this.generator.create())
+    } else if (this.upgrades[num].kind === 'food') {
+      this.others.ratdiscount += 1
+      this.alive = 10 + this.level - this.others.ratdiscount
+      this.coins -= this.upgrades[num].price
+      this.upgrades.splice(num, 1, this.generator.create())
+    } else if (this.upgrades[num].kind === 'weapon') {
+      this.others.coinsperkill += 1
+      this.coins -= this.upgrades[num].price
+      this.upgrades.splice(num, 1, this.generator.create())
+    }
+  }
+  /* TODO: REFACTOR UPGRADES */
 }
 
 // exports

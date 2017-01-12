@@ -1,5 +1,7 @@
 'use strict'
 
-const view = require('./view')
-
-view.load()
+const Game = require('./Game').Game
+let game = new Game()
+document.getElementById('start-button').addEventListener('click', (e) => {
+  game.gameStart()
+})

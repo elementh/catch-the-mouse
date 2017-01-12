@@ -1,145 +1,89 @@
-body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  text-align: center; }
-
+@import url("https://fonts.googleapis.com/css?family=Roboto|Raleway|Creepster|Monoton:400");
 .container {
-  text-align: center;
   display: flex;
-  flex-direction: row; }
-
-.game-container {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 2;
-  border-radius: 10px 10px 10px 10px;
-  border: 22px double #4CAF50;
-  margin-left: 2vw; }
-
-.menu-container {
-  display: flex;
-  flex-direction: column; }
-
-.stats-container {
-  display: flex;
-  flex-direction: column; }
-
-header p {
-  font-size: 200%;
-  margin: 1vw;
-  background: #4CAF50;
-  color: white;
-  padding: 0.5vw;
-  border-radius: 1vw; }
-
-nav {
-  order: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-
-nav h3 {
-  margin: 1vw;
-  background: #4CAF50;
-  color: white;
-  padding: 0.5vw;
-  width: 15vw;
-  border-radius: 1vw; }
-
-nav p {
-  font-size: 200%;
-  margin: 0; }
-
-.game {
-  order: 3;
-  display: flex;
-  flex-direction: column; }
-
-.game button {
-  margin: auto;
-  margin-top: 3vw;
-  margin-bottom: 3vw;
-  background-color: #4CAF50;
-  border: 1px solid #44c767;
-  border-radius: 1vw;
-  color: white;
-  font-weight: bold;
-  padding: 0.5vw;
-  width: 9vw; }
-
-.game button:hover {
-  background-color: #5cbf2a; }
-
-.game button:active {
-  position: relative;
-  top: 1px; }
+  flex-flow: row; }
+  .container .stats {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .container .stats div {
+      font-family: 'Creepster', cursive;
+      margin: 0.5rem;
+      padding: 0.2rem 1rem; }
+      .container .stats div p {
+        font-size: 2rem;
+        margin: 0.2rem; }
+        .container .stats div p .icon {
+          width: 2rem;
+          display: inline;
+          clear: none; }
+      .container .stats div span {
+        font-size: 500%; }
+  .container .game {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 2; }
+    .container .game #start-button {
+      font-family: 'Creepster', cursive;
+      font-size: 3rem;
+      margin: 5rem auto;
+      background-color: #31a550;
+      border: 0.1rem solid #31a550;
+      border-radius: 1rem;
+      color: whitesmoke;
+      width: 20rem;
+      height: 5rem; }
+      .container .game #start-button:hover {
+        background-color: #43c766; }
+      .container .game #start-button:active {
+        box-shadow: inset 0 0.3rem 1rem rgba(0, 0, 0, 0.3); }
+  .container .upgrades {
+    flex-grow: 1;
+    font-size: 200%; }
 
 table {
   width: 100%;
   height: 20vw; }
 
-footer {
-  order: 4;
-  text-align: left; }
-
-footer p {
-  text-align: center;
-  margin: 1vw;
-  background: #4CAF50;
-  color: white;
-  padding: 0.1vw;
-  border-radius: 1vw; }
-
-.icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin: 0;
-  padding: 0; }
-
-#upgrades-container {
-  margin: 0 2rem 0;
-  font-size: 0.7rem; }
-
-#upgrades-container p {
-  border: 1px solid #44c767;
-  margin: 0.5rem;
-  padding: 0;
-  border-radius: 2vw; }
-
-/*Since checkbox won't scale gracefully on firefox(it goes blurry) I used CSS custom styling in the checkbox to the max, hope you like it*/
 /* Base for label styling */
-[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
   position: absolute;
   left: -9999px; }
 
-[type="checkbox"]:not(:checked) + label, [type="checkbox"]:checked + label {
+[type="checkbox"]:checked + label,
+[type="checkbox"]:not(:checked) + label {
   position: relative;
-  padding-left: 25px;
+  padding-left: 6rem;
   cursor: pointer; }
 
 /* checkbox aspect */
-[type="checkbox"]:not(:checked) + label:before, [type="checkbox"]:checked + label:before {
+[type="checkbox"]:checked + label:before,
+[type="checkbox"]:not(:checked) + label:before {
   content: '';
   position: absolute;
   left: 0;
   top: 2px;
-  width: 50px;
-  height: 50px;
+  width: 6rem;
+  height: 6rem;
   border: 1px solid #aaa;
-  background: #f8f8f8;
+  background: #31a550;
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); }
 
 /* checked mark aspect */
-[type="checkbox"]:not(:checked) + label:after, [type="checkbox"]:checked + label:after {
-  content: url(https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_512x512/1f401.png);
+[type="checkbox"]:checked + label:after,
+[type="checkbox"]:not(:checked) + label:after {
+  content: url("https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_512x512/1f401.png");
   position: absolute;
-  top: -14rem;
-  left: -14rem;
+  top: -13rem;
+  left: -13rem;
   font-size: 48px;
   line-height: 0.8;
-  color: #4CAF50;
-  transition: all .2s; }
+  color: #31a550;
+  transition: all 0.2s; }
 
 /* checked mark aspect changes */
 [type="checkbox"]:not(:checked) + label:after {
@@ -148,8 +92,98 @@ footer p {
 
 [type="checkbox"]:checked + label:after {
   opacity: 1;
-  transform: scale(0.15); }
+  transform: scale(0.3); }
 
 /* accessibility */
-[type="checkbox"]:checked:focus + label:before, [type="checkbox"]:not(:checked):focus + label:before {
-  border: 1px dotted blue; }
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted #31a550; }
+
+[type="checkbox"]:checked:hover + label:before,
+[type="checkbox"]:not(:checked):hover + label:before {
+  background: #43c766; }
+
+[type="checkbox"]:checked:active + label:before,
+[type="checkbox"]:not(:checked):active + label:before {
+  box-shadow: inset 0 0.2rem 1rem rgba(0, 0, 0, 0.3); }
+
+bel:before {
+  border: 1px dotted #31a550; }
+
+.octicon {
+  color: whitesmoke;
+  position: absolute;
+  top: 0;
+  border: 0;
+  right: 0;
+  fill: #31a550; }
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out; }
+
+.github-corner:hover .octicon {
+  animation: hue-fill 1.5s linear infinite; }
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0); }
+  20%,
+  60% {
+    transform: rotate(-25deg); }
+  40%,
+  80% {
+    transform: rotate(10deg); } }
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none; }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out; } }
+
+body {
+  display: flex;
+  flex-flow: column;
+  font-family: 'Creepster', cursive;
+  text-align: center;
+  color: #43c766;
+  background: whitesmoke; }
+
+header h1 {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+  font-weight: bold;
+  font-size: 600%;
+  margin: 1rem;
+  background-color: #31a550;
+  color: transparent;
+  text-shadow: 0 2px 3px rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text; }
+
+header a:hover .octicon {
+  fill: #43c766; }
+
+header #player {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-family: 'Creepster', cursive;
+  border: 0.1rem solid #31a550;
+  border-radius: 1rem;
+  color: #43c766; }
+  header #player h2 {
+    margin: 0;
+    padding: 0.5rem; }
+  header #player:hover {
+    background-color: #43c766;
+    color: whitesmoke; }
+  header #player:active {
+    box-shadow: inset 0 0.3rem 1rem rgba(0, 0, 0, 0.3); }
