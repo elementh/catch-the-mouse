@@ -1,3 +1,6 @@
+'use strict'
+
+// Upgrade
 class Upgrade {
   constructor (name, price, kind) {
     this._name = name

@@ -103,7 +103,7 @@ class Scoreboard {
 
 }
 
-// EXPORTS
+// exports
 module.exports = {
   Scoreboard: Scoreboard
 }
