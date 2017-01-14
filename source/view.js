@@ -2,7 +2,7 @@
 // requires
 const Vue = require('vue')
 
-function load () {
+function load (game) {
   let player = new Vue({
     el: '#player',
     data: {

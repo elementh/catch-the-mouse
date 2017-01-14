@@ -170,7 +170,7 @@ class Game extends Player {
   }
   gameLostBecause (why) {
     if (why === 'time') {
-      this.stop()
+      this.gameStop()
       alert(`'Se t'ha acabat el temps. Has perdut al nivell ${this.level} i has atrapat a un total de ${this.levelkills} ratolins!`)
       // TODO: refactor with swal
     } else if (why === 'badclick') {
